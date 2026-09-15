@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-Commerce With Hassan | eBay & Etsy Training</title>
+
+<meta name="description" content="Learn eBay and Etsy e-commerce skills with Hassan. Build practical skills, explore online income opportunities and learn how to work from home.">
+
+<style>
+:root{
+    --black:#050608;
+    --black2:#080a0d;
+    --panel:#0d1014;
+    --panel2:#12161b;
+    --gold:#d5aa43;
+    --gold2:#f4d276;
+    --gold3:#9f7622;
+    --white:#ffffff;
+    --soft:#e9e9e5;
+    --muted:#9da4ad;
+    --line:rgba(213,170,67,.22);
+    --green:#25d366;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(213,170,67,.10), transparent 28%),
+        radial-gradient(circle at 10% 50%, rgba(213,170,67,.06), transparent 25%),
+        linear-gradient(135deg,#030405,#090b0e 50%,#050608);
+    color:var(--white);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.12;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:55px 55px;
+    z-index:-1;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+.gold{
+    color:var(--gold2);
+}
+
+.muted{
+    color:var(--muted);
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    background:rgba(5,6,8,.84);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(213,170,67,.12);
+}
+
+.nav{
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    border-radius:12px;
+}
+
+.logo-text{
+    font-size:17px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.logo-text span{
+    color:var(--gold2);
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#d5d7d9;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold2);
+}
+
+.nav-btn{
+    padding:12px 20px;
+    border:1px solid var(--gold);
+    border-radius:30px;
+    color:var(--gold2)!important;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding-top:140px;
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:9px 15px;
+    border:1px solid var(--line);
+    background:rgba(213,170,67,.07);
+    border-radius:50px;
+    color:var(--gold2);
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1.3px;
+    text-transform:uppercase;
+    box-shadow:0 0 25px rgba(213,170,67,.08);
+}
+
+.badge:before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--gold2);
+    box-shadow:0 0 12px var(--gold2);
+}
+
+.hero h1{
+    font-size:clamp(44px,6vw,78px);
+    line-height:1.02;
+    margin:22px 0;
+    font-weight:950;
+    letter-spacing:-3px;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,var(--gold),var(--gold2),#fff0b0);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:680px;
+    color:#b8bec5;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 23px;
+    border-radius:10px;
+    font-weight:900;
+    font-size:14px;
+    transition:.3s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn-gold{
+    background:linear-gradient(135deg,var(--gold3),var(--gold2));
+    color:#080808;
+    box-shadow:0 12px 35px rgba(213,170,67,.18);
+}
+
+.btn-gold:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 45px rgba(213,170,67,.3);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.025);
+    color:white;
+}
+
+.btn-outline:hover{
+    border-color:var(--gold);
+    color:var(--gold2);
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    position:relative;
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.dashboard-main{
+    width:100%;
+    max-width:510px;
+    min-height:360px;
+    background:linear-gradient(145deg,rgba(20,24,29,.94),rgba(8,10,13,.96));
+    border:1px solid rgba(213,170,67,.28);
+    border-radius:28px;
+    padding:28px;
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.65),
+        inset 0 0 50px rgba(213,170,67,.025);
+    position:relative;
+    overflow:hidden;
+}
+
+.dashboard-main:before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    background:rgba(213,170,67,.08);
+    filter:blur(70px);
+    border-radius:50%;
+    top:-100px;
+    right:-80px;
+}
+
+.dash-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,.07);
+    padding-bottom:20px;
+}
+
+.dash-title{
+    font-size:13px;
+    font-weight:900;
+    color:#cfd2d5;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.dash-live{
+    color:#66e39a;
+    font-size:11px;
+    font-weight:900;
+}
+
+.marketplaces{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-top:25px;
+}
+
+.market{
+    padding:22px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.025);
+}
+
+.market strong{
+    font-size:20px;
+}
+
+.market small{
+    display:block;
+    color:#858c94;
+    margin-top:5px;
+}
+
+.chart{
+    height:120px;
+    margin-top:25px;
+    display:flex;
+    align-items:end;
+    gap:9px;
+    padding:0 10px;
+}
+
+.bar{
+    flex:1;
+    border-radius:6px 6px 2px 2px;
+    background:linear-gradient(to top,var(--gold3),var(--gold2));
+    opacity:.8;
+}
+
+.bar:nth-child(1){height:28%}
+.bar:nth-child(2){height:38%}
+.bar:nth-child(3){height:33%}
+.bar:nth-child(4){height:52%}
+.bar:nth-child(5){height:48%}
+.bar:nth-child(6){height:67%}
+.bar:nth-child(7){height:61%}
+.bar:nth-child(8){height:82%}
+.bar:nth-child(9){height:74%}
+.bar:nth-child(10){height:94%}
+
+.float-card{
+    position:absolute;
+    background:rgba(15,18,22,.95);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(213,170,67,.32);
+    border-radius:16px;
+    padding:16px 19px;
+    box-shadow:0 20px 45px rgba(0,0,0,.5);
+}
+
+.float-card small{
+    color:#8d949b;
+    display:block;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.float-card strong{
+    color:var(--gold2);
+    font-size:21px;
+}
+
+.card-students{
+    left:-15px;
+    bottom:48px;
+}
+
+.card-price{
+    right:-15px;
+    top:55px;
+}
+
+/* STATS */
+
+.stats{
+    margin-top:20px;
+    padding:25px 0;
+    border-top:1px solid rgba(255,255,255,.06);
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:32px;
+    color:var(--gold2);
+    font-weight:950;
+}
+
+.stat span{
+    color:#8f969e;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* SECTION */
+
+section{
+    padding:105px 0;
+}
+
+.section-head{
+    max-width:760px;
+    margin:0 auto 55px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--gold2);
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-head h2{
+    font-size:clamp(32px,4vw,50px);
+    line-height:1.1;
+    margin-bottom:18px;
+    font-weight:950;
+    letter-spacing:-1.5px;
+}
+
+.section-head p{
+    color:#979ea6;
+    font-size:16px;
+}
+
+/* QUOTE */
+
+.quote-band{
+    padding:60px 0;
+    background:
+        linear-gradient(90deg,rgba(213,170,67,.08),transparent,rgba(213,170,67,.08));
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.quote{
+    text-align:center;
+    font-size:clamp(25px,4vw,44px);
+    font-weight:950;
+    max-width:950px;
+    margin:auto;
+    line-height:1.2;
+}
+
+.quote span{
+    color:var(--gold2);
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    padding:28px;
+    border-radius:20px;
+    background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
+    border:1px solid rgba(255,255,255,.07);
+    transition:.35s;
+}
+
+.feature:hover{
+    transform:translateY(-8px);
+    border-color:rgba(213,170,67,.35);
+    box-shadow:0 25px 55px rgba(0,0,0,.3);
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:rgba(213,170,67,.09);
+    border:1px solid rgba(213,170,67,.2);
+    color:var(--gold2);
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.feature h3{
+    font-size:19px;
+    margin-bottom:9px;
+}
+
+.feature p{
+    color:#9299a1;
+    font-size:14px;
+}
+
+/* COURSE */
+
+.course-section{
+    background:linear-gradient(180deg,transparent,rgba(213,170,67,.025),transparent);
+}
+
+.course{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:30px;
+    padding:35px;
+    border-radius:28px;
+    background:
+        linear-gradient(145deg,rgba(19,22,27,.98),rgba(7,9,12,.98));
+    border:1px solid rgba(213,170,67,.27);
+    box-shadow:0 35px 100px rgba(0,0,0,.4);
+}
+
+.course-info{
+    position:relative;
+}
+
+.course-badge{
+    display:inline-block;
+    background:linear-gradient(135deg,var(--gold3),var(--gold2));
+    color:#080808;
+    font-size:11px;
+    font-weight:950;
+    padding:8px 12px;
+    border-radius:5px;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+
+.course-info h3{
+    font-size:clamp(30px,4vw,47px);
+    line-height:1.05;
+    font-weight:950;
+    margin-bottom:18px;
+}
+
+.course-info p{
+    color:#9ba2aa;
+    font-size:15px;
+}
+
+.price{
+    margin:25px 0;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(213,170,67,.07);
+    border:1px solid rgba(213,170,67,.2);
+}
+
+.price small{
+    color:#999;
+    display:block;
+    text-transform:uppercase;
+    font-size:10px;
+    letter-spacing:1.5px;
+}
+
+.price strong{
+    display:block;
+    color:var(--gold2);
+    font-size:42px;
+    line-height:1.1;
+    margin-top:4px;
+}
+
+.price span{
+    color:#8d949c;
+    font-size:12px;
+}
+
+.course-points{
+    display:grid;
+    gap:12px;
+    margin:22px 0;
+}
+
+.course-points div{
+    color:#c5c9cd;
+    font-size:14px;
+}
+
+.course-points div:before{
+    content:"✓";
+    color:var(--gold2);
+    font-weight:900;
+    margin-right:9px;
+}
+
+.modules{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.module{
+    padding:17px;
+    border-radius:14px;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.065);
+    transition:.3s;
+}
+
+.module:hover{
+    border-color:rgba(213,170,67,.3);
+    transform:translateY(-2px);
+}
+
+.module-number{
+    color:var(--gold2);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.module strong{
+    display:block;
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service{
+    min-height:190px;
+    padding:25px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.025);
+    transition:.35s;
+}
+
+.service:hover{
+    transform:translateY(-7px);
+    background:rgba(213,170,67,.045);
+    border-color:rgba(213,170,67,.3);
+}
+
+.service-number{
+    color:var(--gold2);
+    font-weight:950;
+    font-size:12px;
+}
+
+.service h3{
+    margin:15px 0 8px;
+    font-size:17px;
+}
+
+.service p{
+    color:#898f97;
+    font-size:13px;
+}
+
+/* EARNING */
+
+.earning{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    align-items:stretch;
+}
+
+.earning-box{
+    padding:40px;
+    border-radius:25px;
+    border:1px solid rgba(213,170,67,.2);
+    background:linear-gradient(145deg,rgba(213,170,67,.07),rgba(255,255,255,.015));
+}
+
+.earning-box h3{
+    font-size:34px;
+    line-height:1.1;
+    margin-bottom:17px;
+}
+
+.earning-box p{
+    color:#9aa1a8;
+}
+
+.big-text{
+    margin-top:25px;
+    font-size:42px;
+    font-weight:950;
+    color:var(--gold2);
+    line-height:1;
+}
+
+.check-list{
+    display:grid;
+    gap:16px;
+}
+
+.check{
+    display:flex;
+    gap:13px;
+    align-items:flex-start;
+}
+
+.check-icon{
+    flex:none;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(213,170,67,.1);
+    color:var(--gold2);
+    border:1px solid rgba(213,170,67,.25);
+}
+
+.check strong{
+    display:block;
+    font-size:15px;
+}
+
+.check p{
+    color:#858c94;
+    font-size:13px;
+    margin-top:3px;
+}
+
+/* AUDIENCE */
+
+.audience{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.person{
+    padding:25px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.025);
+    border-radius:18px;
+}
+
+.person-icon{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.person strong{
+    display:block;
+    font-size:15px;
+}
+
+.person span{
+    display:block;
+    color:#858c94;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* PROCESS */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.step{
+    text-align:center;
+    position:relative;
+}
+
+.step-number{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    color:var(--gold2);
+    font-size:22px;
+    font-weight:950;
+    box-shadow:0 0 30px rgba(213,170,67,.08);
+}
+
+.step h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.step p{
+    color:#8b929a;
+    font-size:14px;
+    max-width:280px;
+    margin:auto;
+}
+
+/* TESTIMONIAL / MOTIVATION */
+
+.motivation-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.motivation{
+    padding:30px;
+    border-left:2px solid var(--gold);
+    background:linear-gradient(90deg,rgba(213,170,67,.07),transparent);
+}
+
+.motivation p{
+    font-size:18px;
+    font-weight:800;
+    line-height:1.5;
+}
+
+.motivation span{
+    display:block;
+    margin-top:14px;
+    color:var(--gold2);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+/* CTA */
+
+.cta{
+    padding:65px 30px;
+    text-align:center;
+    border-radius:28px;
+    border:1px solid rgba(213,170,67,.28);
+    background:
+        radial-gradient(circle at center,rgba(213,170,67,.12),transparent 55%),
+        linear-gradient(145deg,#111419,#080a0d);
+    box-shadow:0 35px 90px rgba(0,0,0,.35);
+}
+
+.cta h2{
+    font-size:clamp(35px,5vw,58px);
+    font-weight:950;
+    line-height:1.05;
+    margin-bottom:18px;
+}
+
+.cta p{
+    color:#9ca3aa;
+    max-width:650px;
+    margin:0 auto 28px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-card{
+    padding:30px;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.025);
+    border-radius:20px;
+}
+
+.contact-card h3{
+    margin-bottom:10px;
+}
+
+.contact-card p{
+    color:#8e959d;
+    font-size:14px;
+}
+
+.contact-link{
+    display:inline-block;
+    margin-top:15px;
+    color:var(--gold2);
+    font-weight:900;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 0 25px;
+    border-top:1px solid rgba(255,255,255,.07);
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:35px;
+}
+
+.footer-brand p{
+    color:#858c94;
+    max-width:400px;
+    font-size:14px;
+    margin-top:14px;
+}
+
+footer h4{
+    color:var(--gold2);
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    color:#8b9299;
+    font-size:13px;
+    margin-bottom:9px;
+}
+
+.copyright{
+    text-align:center;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.06);
+    color:#686f77;
+    font-size:12px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--green);
+    border-radius:50%;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(37,211,102,.3);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+.whatsapp svg{
+    width:29px;
+    height:29px;
+    fill:white;
+}
+
+/* DISCLAIMER */
+
+.disclaimer{
+    color:#666d74;
+    font-size:11px;
+    text-align:center;
+    max-width:850px;
+    margin:25px auto 0;
+    line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+    .nav-links{
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:#080a0d;
+        border-bottom:1px solid rgba(213,170,67,.15);
+        display:none;
+        flex-direction:column;
+        padding:25px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-grid,
+    .course,
+    .earning,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard{
+        min-height:430px;
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .audience{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .features,
+    .services,
+    .audience,
+    .process,
+    .motivation-grid{
+        grid-template-columns:1fr;
+    }
+
+    .modules{
+        grid-template-columns:1fr;
+    }
+
+    .course{
+        padding:22px;
+    }
+
+    .card-students{
+        left:-5px;
+        bottom:20px;
+    }
+
+    .card-price{
+        right:-5px;
+        top:25px;
+    }
+
+    .dashboard-main{
+        padding:20px;
+    }
+
+    .market{
+        padding:16px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container nav">
+
+        <a href="#home" class="logo">
+            <img src="logo.jpg" alt="E-Commerce With Hassan Logo">
+            <div class="logo-text">
+                E-COMMERCE <span>WITH HASSAN</span>
+            </div>
+        </a>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#course">Course</a>
+            <a href="#services">Services</a>
+            <a href="#about">Why Us</a>
+            <a href="#contact" class="nav-btn">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="badge">
+                E-Commerce Training & Account Management
+            </div>
+
+            <h1>
+                Learn E-Commerce.<br>
+                <span>Earn From Home.</span><br>
+                Build Your Future.
+            </h1>
+
+            <p>
+                Learn eBay & Etsy, build practical marketplace skills and
+                explore real online income opportunities — all from the
+                comfort of your home.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="btn btn-gold"
+                   href="https://wa.me/447882746500?text=Hi%20Hassan%2C%20I%20want%20to%20join%20the%20eBay%20%26%20Etsy%20E-Commerce%20Training%20Course."
+                   target="_blank">
+                    JOIN THE COURSE
+                </a>
+
+                <a class="btn btn-outline" href="#services">
+                    EXPLORE SERVICES
+                </a>
+            </div>
+
+            <div style="margin-top:28px;">
+                <strong style="color:#fff;font-size:14px;">
+                    LEARN • EARN • GROW
+                </strong>
+                <div style="color:#777f87;font-size:12px;margin-top:5px;">
+                    Build Skills. Earn From Home. Grow With Consistency.
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- DASHBOARD -->
+        <div class="dashboard">
+
+            <div class="dashboard-main">
+
+                <div class="dash-top">
+                    <div class="dash-title">
+                        E-Commerce Growth Dashboard
+                    </div>
+
+                    <div class="dash-live">
+                        ● LEARNING ACTIVE
+                    </div>
+                </div>
+
+                <div class="marketplaces">
+
+                    <div class="market">
+                        <strong>eBay</strong>
+                        <small>Marketplace Skills</small>
+                    </div>
+
+                    <div class="market">
+                        <strong>Etsy</strong>
+                        <small>Online Store Skills</small>
+                    </div>
+
+                </div>
+
+                <div style="margin-top:22px;color:#888f97;font-size:11px;text-transform:uppercase;letter-spacing:1px;">
+                    Skills & Growth Journey
+                </div>
+
+                <div class="chart">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+            </div>
+
+            <div class="float-card card-students">
+                <small>Students Trained</small>
+                <strong>50+</strong>
+            </div>
+
+            <div class="float-card card-price">
+                <small>Course Fee</small>
+                <strong>Rs. 25,000</strong>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- STATS -->
+<div class="container stats">
+    <div class="stats-grid">
+
+        <div class="stat">
+            <strong>50+</strong>
+            <span>Students Trained</span>
+        </div>
+
+        <div class="stat">
+            <strong>2</strong>
+            <span>Major Marketplaces</span>
+        </div>
+
+        <div class="stat">
+            <strong>12</strong>
+            <span>Course Modules</span>
+        </div>
+
+        <div class="stat">
+            <strong>1</strong>
+            <span>Goal — Your Growth</span>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- MOTIVATIONAL QUOTE -->
+<div class="quote-band">
+    <div class="container">
+        <div class="quote">
+            "Your <span>home can be your starting point</span> for a better online future."
+        </div>
+    </div>
+</div>
+
+
+<!-- WHY US -->
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">WHY E-COMMERCE WITH HASSAN</div>
+
+            <h2>
+                Learn Skills That Can <span class="gold">Open New Opportunities</span>
+            </h2>
+
+            <p>
+                Our goal is to help beginners understand e-commerce,
+                develop practical marketplace skills and build confidence
+                to work toward their online income goals.
+            </p>
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="icon">01</div>
+                <h3>Practical Learning</h3>
+                <p>
+                    Learn marketplace concepts through practical,
+                    easy-to-understand guidance.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">02</div>
+                <h3>Beginner Friendly</h3>
+                <p>
+                    No advanced technical background is required.
+                    Start from the basics and progress step by step.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">03</div>
+                <h3>Growth Focused</h3>
+                <p>
+                    Learn how to build skills that can support your
+                    long-term e-commerce journey.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COURSE -->
+<section class="course-section" id="course">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">FEATURED TRAINING</div>
+
+            <h2>
+                eBay & Etsy <span class="gold">E-Commerce Training Course</span>
+            </h2>
+
+            <p>
+                Learn. Apply. Build Skills. Explore Ways to Earn From Home.
+            </p>
+        </div>
+
+
+        <div class="course">
+
+            <!-- COURSE INFO -->
+            <div class="course-info">
+
+                <div class="course-badge">
+                    CHEAPEST IN TOWN
+                </div>
+
+                <h3>
+                    eBay & Etsy<br>
+                    E-Commerce<br>
+                    Training
+                </h3>
+
+                <p>
+                    A complete beginner-friendly course designed to help
+                    you understand e-commerce and develop practical
+                    marketplace skills.
+                </p>
+
+                <div class="price">
+                    <small>Complete Course Fee</small>
+                    <strong>Rs. 25,000</strong>
+                    <span>One-time training fee</span>
+                </div>
+
+                <div class="course-points">
+                    <div>Beginner to advanced learning roadmap</div>
+                    <div>eBay & Etsy marketplace training</div>
+                    <div>Product research & sourcing guidance</div>
+                    <div>Listing optimization & SEO concepts</div>
+                    <div>Order & customer management</div>
+                    <div>Online income opportunity guidance</div>
+                </div>
+
+                <a class="btn btn-gold"
+                   href="https://wa.me/447882746500?text=Hi%20Hassan%2C%20I%20want%20to%20join%20the%20eBay%20%26%20Etsy%20E-Commerce%20Training%20Course."
+                   target="_blank">
+                    RESERVE YOUR SEAT
+                </a>
+
+            </div>
+
+
+            <!-- MODULES -->
+            <div>
+
+                <div style="margin-bottom:17px;">
+                    <div class="eyebrow" style="margin-bottom:5px;">
+                        FULL CURRICULUM
+                    </div>
+
+                    <h3 style="font-size:25px;">
+                        12-Module Learning Roadmap
+                    </h3>
+                </div>
+
+                <div class="modules">
+
+                    <div class="module">
+                        <div class="module-number">MODULE 01</div>
+                        <strong>E-Commerce Foundations</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 02</div>
+                        <strong>eBay Account Setup & Fundamentals</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 03</div>
+                        <strong>Etsy Account Setup & Fundamentals</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 04</div>
+                        <strong>Product Research</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 05</div>
+                        <strong>Product Sourcing</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 06</div>
+                        <strong>Keyword Research & SEO</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 07</div>
+                        <strong>Listing Creation & Optimization</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 08</div>
+                        <strong>Pricing, Profit & Competitor Analysis</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 09</div>
+                        <strong>Order & Customer Management</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 10</div>
+                        <strong>Store Management & Growth</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 11</div>
+                        <strong>Practical Workflow & Case Study</strong>
+                    </div>
+
+                    <div class="module">
+                        <div class="module-number">MODULE 12</div>
+                        <strong>Beginner-to-Advanced Roadmap</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUOTE -->
+<div class="quote-band">
+    <div class="container">
+        <div class="quote">
+            "Don't wait for the perfect time. <span>Start learning today.</span>"
+        </div>
+    </div>
+</div>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">OUR SERVICES</div>
+
+            <h2>
+                Complete <span class="gold">E-Commerce Support</span>
+            </h2>
+
+            <p>
+                Training is only one part of the journey. We also provide
+                marketplace support and e-commerce services.
+            </p>
+        </div>
+
+
+        <div class="services">
+
+            <div class="service">
+                <div class="service-number">01 / SERVICE</div>
+                <h3>eBay Account Management</h3>
+                <p>
+                    Professional support for managing your eBay
+                    marketplace activities.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-number">02 / SERVICE</div>
+                <h3>Product Research</h3>
+                <p>
+                    Research products and market opportunities based
+                    on practical criteria.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-number">03 / SERVICE</div>
+                <h3>Listing Optimization</h3>
+                <p>
+                    Improve product titles, descriptions, keywords
+                    and listing presentation.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-number">04 / SERVICE</div>
+                <h3>Store Management</h3>
+                <p>
+                    Ongoing marketplace support designed to keep
+                    your store organized.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-number">05 / SERVICE</div>
+                <h3>Etsy Support</h3>
+                <p>
+                    Assistance with Etsy store activities,
+                    listings and marketplace workflows.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-number">06 / SERVICE</div>
+                <h3>Product Sourcing</h3>
+                <p>
+                    Guidance for finding suitable products and
+                    evaluating sourcing opportunities.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-number">07 / SERVICE</div>
+                <h3>E-Commerce Consultation</h3>
+                <p>
+                    One-to-one guidance for your e-commerce
+                    plans and marketplace journey.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-number">08 / SERVICE</div>
+                <h3>Business Support</h3>
+                <p>
+                    Practical support for people building or
+                    improving their online business.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EARNING -->
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">EARN FROM HOME</div>
+
+            <h2>
+                Turn Your Skills Into <span class="gold">Online Income Opportunities</span>
+            </h2>
+
+            <p>
+                Learn the skills, understand the marketplace and work
+                toward creating your own online income opportunity.
+            </p>
+        </div>
+
+
+        <div class="earning">
+
+            <div class="earning-box">
+
+                <h3>
+                    Build Skills.<br>
+                    <span class="gold">Earn From Home.</span>
+                </h3>
+
+                <p>
+                    E-commerce can give you the flexibility to learn,
+                    work and build your online journey from home.
+                    Your results will depend on your skills, effort,
+                    consistency, strategy and market conditions.
+                </p>
+
+                <div class="big-text">
+                    LEARN • EARN • GROW
+                </div>
+
+            </div>
+
+
+            <div class="earning-box">
+
+                <div class="check-list">
+
+                    <div class="check">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Learn From Home</strong>
+                            <p>
+                                Develop useful e-commerce skills from
+                                wherever you are.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Explore Online Opportunities</strong>
+                            <p>
+                                Understand how marketplace businesses
+                                can create income opportunities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Start From Day One</strong>
+                            <p>
+                                Follow a structured roadmap instead of
+                                trying to figure everything out alone.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Grow With Consistency</strong>
+                            <p>
+                                Keep improving your knowledge, strategy
+                                and marketplace skills.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AUDIENCE -->
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">WHO CAN JOIN?</div>
+
+            <h2>
+                Start Your <span class="gold">E-Commerce Journey</span>
+            </h2>
+
+            <p>
+                Our training is designed for beginners and people
+                who want to develop practical online business skills.
+            </p>
+
+        </div>
+
+
+        <div class="audience">
+
+            <div class="person">
+                <div class="person-icon">🎓</div>
+                <strong>Students</strong>
+                <span>Learn a modern digital skill</span>
+            </div>
+
+            <div class="person">
+                <div class="person-icon">🏠</div>
+                <strong>Housewives</strong>
+                <span>Explore ways to work from home</span>
+            </div>
+
+            <div class="person">
+                <div class="person-icon">💼</div>
+                <strong>Job Holders</strong>
+                <span>Build skills alongside your career</span>
+            </div>
+
+            <div class="person">
+                <div class="person-icon">🚀</div>
+                <strong>Beginners</strong>
+                <span>Start your e-commerce journey</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MOTIVATION -->
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+            <div class="eyebrow">YOUR NEXT STEP</div>
+
+            <h2>
+                Your <span class="gold">Home Can Be Your Starting Point</span>
+            </h2>
+        </div>
+
+
+        <div class="motivation-grid">
+
+            <div class="motivation">
+                <p>
+                    "Learn eBay & Etsy. Build your online income journey."
+                </p>
+                <span>LEARN</span>
+            </div>
+
+            <div class="motivation">
+                <p>
+                    "Start from day one and work toward your online income goals."
+                </p>
+                <span>START</span>
+            </div>
+
+            <div class="motivation">
+                <p>
+                    "Learn today. Earn tomorrow. Grow consistently."
+                </p>
+                <span>GROW</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+<section>
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">OUR APPROACH</div>
+
+            <h2>
+                Learn. Apply. <span class="gold">Grow.</span>
+            </h2>
+
+            <p>
+                A simple approach to help you move from learning
+                to practical action.
+            </p>
+
+        </div>
+
+
+        <div class="process">
+
+            <div class="step">
+
+                <div class="step-number">01</div>
+
+                <h3>Learn</h3>
+
+                <p>
+                    Understand eBay, Etsy, product research,
+                    listings, SEO and e-commerce fundamentals.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">02</div>
+
+                <h3>Apply</h3>
+
+                <p>
+                    Put your knowledge into practice and build
+                    confidence through real marketplace workflows.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">03</div>
+
+                <h3>Earn & Grow</h3>
+
+                <p>
+                    Explore online income opportunities and continue
+                    improving your skills with consistency.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+<section>
+
+    <div class="container">
+
+        <div class="cta">
+
+            <div class="eyebrow">
+                READY TO START?
+            </div>
+
+            <h2>
+                Start Learning.<br>
+                <span class="gold">Earn From Home.</span>
+            </h2>
+
+            <p>
+                Take the first step toward building your e-commerce
+                skills and exploring online income opportunities.
+            </p>
+
+            <a class="btn btn-gold"
+               href="https://wa.me/447882746500?text=Hi%20Hassan%2C%20I%20want%20to%20join%20the%20eBay%20%26%20Etsy%20E-Commerce%20Training%20Course."
+               target="_blank">
+                JOIN eBAY & ETSY COURSE
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="eyebrow">GET IN TOUCH</div>
+
+            <h2>
+                Let's Build Your <span class="gold">E-Commerce Journey</span>
+            </h2>
+
+            <p>
+                Have a question about training, account management
+                or e-commerce services? Contact us directly.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h3>WhatsApp</h3>
+
+                <p>
+                    Chat with us directly for course details,
+                    registration and e-commerce services.
+                </p>
+
+                <a class="contact-link"
+                   href="https://wa.me/447882746500"
+                   target="_blank">
+                    +44 7882 746500 →
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>Facebook</h3>
+
+                <p>
+                    Follow our Facebook page for e-commerce
+                    updates, training information and new posts.
+                </p>
+
+                <a class="contact-link"
+                   href="https://www.facebook.com/share/p/1HooAZuwf1/"
+                   target="_blank">
+                    Visit Facebook Page →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <img src="logo.jpg" alt="E-Commerce With Hassan">
+
+                    <div class="logo-text">
+                        E-COMMERCE <span>WITH HASSAN</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Learn e-commerce skills, explore online income
+                    opportunities and build your digital future
+                    from home.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#course">Training Course</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">Why Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>Connect</h4>
+
+                <ul>
+                    <li>
+                        <a href="https://wa.me/447882746500" target="_blank">
+                            WhatsApp
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/share/p/1HooAZuwf1/" target="_blank">
+                            Facebook
+                        </a>
+                    </li>
+
+                    <li>
+                        eBay & Etsy Training
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 E-Commerce With Hassan. All Rights Reserved.
+        </div>
+
+        <div class="disclaimer">
+            E-commerce income and business results are not guaranteed.
+            Individual results vary based on skills, effort, consistency,
+            strategy, market conditions and other factors.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/447882746500?text=Hi%20Hassan%2C%20I%20want%20to%20know%20more%20about%20your%20eBay%20%26%20Etsy%20E-Commerce%20Training%20Course."
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+
+    <svg viewBox="0 0 32 32">
+        <path d="M16.02 3C8.84 3 3 8.82 3 16c0 2.29.6 4.44 1.75 6.34L3 29l6.83-1.69A12.94 12.94 0 0 0 16.02 29C23.18 29 29 23.18 29 16S23.18 3 16.02 3zm0 23.7c-1.94 0-3.84-.52-5.5-1.5l-.39-.23-4.05 1 1.08-3.94-.25-.4A10.78 10.78 0 0 1 5.2 16c0-5.96 4.85-10.8 10.82-10.8 2.89 0 5.6 1.12 7.64 3.16A10.75 10.75 0 0 1 26.8 16c0 5.96-4.84 10.7-10.78 10.7zm5.92-8.05c-.32-.16-1.89-.93-2.18-1.03-.29-.11-.5-.16-.71.16-.21.31-.81 1.03-.99 1.24-.18.21-.37.23-.68.08-.32-.16-1.35-.5-2.58-1.6-.95-.84-1.59-1.88-1.77-2.2-.18-.31-.02-.48.14-.64.15-.15.32-.37.47-.55.16-.18.21-.31.32-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.25-.61-.51-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.22 3.39 5.38 4.75.75.32 1.33.51 1.78.65.75.24 1.43.21 1.97.13.6-.09 1.89-.77 2.15-1.52.26-.74.26-1.38.18-1.52-.08-.13-.29-.21-.6-.37z"/>
+    </svg>
+
+</a>
+
+
+<script>
+
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+    link.addEventListener("click",function(){
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+
+</script>
+
+</body>
+</html>
